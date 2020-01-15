@@ -1,0 +1,43 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8085
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/hostone-api/{catchAll}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8090
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/hosttwo-api/{catchAll}"
+    },
+    {
+      "DownstreamPathTemplate": "/api/{catchAll}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 8087
+        }
+      ],
+      "UpstreamHttpMethod": [ "GET" ],
+      "UpstreamPathTemplate": "/hostthree-api/{catchAll}"
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
